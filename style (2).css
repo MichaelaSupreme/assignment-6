@@ -1,0 +1,82 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: white;
+    color: black;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+/* Dark mode styles (will be applied via JavaScript) */
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+/* Header Navigation (Flexbox) */
+header {
+    background: #333;
+    padding: 15px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Layout (CSS Grid) */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Sections */
+section {
+    background: lightblue;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Dark mode support for sections */
+.dark-mode section {
+    background: #555;
+}
+
+/* Responsive Design (For Mobile Screens) */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Change to one-column layout */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
